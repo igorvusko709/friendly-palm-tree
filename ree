@@ -1,0 +1,8 @@
+func makeCoordinator() -> Coordinator {
+        return Coordinator(image: $image, showScreen: $showScreen)
+    }
+    
+    class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+        
+        @Binding var image: UIImage?
+        @Binding var showScreen: Bool
